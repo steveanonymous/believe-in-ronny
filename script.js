@@ -10,23 +10,40 @@ const tracks = [
 ];
 
 let currentAudio = null;
+let currentIndex = 0;
 
 function playTrack(index) {
     if (currentAudio) {
         currentAudio.pause();
         currentAudio.currentTime = 0;
+        currentAudio.removeEventListener('ended', playNextTrack);
     }
     
-    currentAudio = new Audio(tracks[index]);
+    currentIndex = index;
+    currentAudio = new Audio(tracks[currentIndex]);
+    
+    currentAudio.addEventListener('ended', playNextTrack);
+    
     currentAudio.play().catch(error => {
         console.error("Playback failed:", error);
         alert("Playback failed. Ensure your audio folder is present and files are named correctly.");
     });
 }
 
+function playNextTrack() {
+    let nextIndex = currentIndex + 1;
+    
+    if (nextIndex < tracks.length) {
+        playTrack(nextIndex);
+    } else {
+        currentAudio = null;
+    }
+}
+
 function stopAudio() {
     if (currentAudio) {
         currentAudio.pause();
         currentAudio.currentTime = 0;
+        currentAudio.removeEventListener('ended', playNextTrack);
     }
 }
