@@ -1,0 +1,58 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.jukebox-container {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    text-align: center;
+    width: 350px;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.track-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #333333;
+    color: #ffffff;
+    border: 2px solid #555555;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+button:hover {
+    background-color: #444444;
+    border-color: #777777;
+}
+
+#stop-btn {
+    background-color: #8b0000;
+    border-color: #ff0000;
+    width: 100%;
+}
+
+#stop-btn:hover {
+    background-color: #a52a2a;
+}
