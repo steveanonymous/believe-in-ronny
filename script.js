@@ -6,7 +6,7 @@ const tracks = [
     { title: 'tie dyes (prod. by Light)', src: 'audio/track5.mp3' },
     { title: 'dry season (prod. by rnillennial)', src: 'audio/track6.mp3' },
     { title: 'lonely nights (feat. chax) (prod. by SCUBA)', src: 'audio/track7.mp3' },
-    { title: 'drop out (prod. by rnillenial)', src: 'audio/track8.mp3' }
+    { title: 'drop out (prod. by rnillennial)', src: 'audio/track8.mp3' }
 ];
 
 // Initialize audio object
